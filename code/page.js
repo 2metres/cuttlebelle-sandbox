@@ -1,14 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-
-/**
- * The page layout component
- */
 const Page = ( page ) => (
 	<html>
 	<head>
-		<title>Cuttlebelle - { page.title }</title>
+		<title>{ page.title }</title>
 		<meta charSet="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,19 +18,11 @@ const Page = ( page ) => (
 	</head>
 	<body>
 		<div className="top">
-			<header role="banner">
-				{ page.header }
-			</header>
-
-			<main>
-				{ page.main }
-			</main>
+			<header role="banner">{ page.header }</header>
+			<main>{ page.main }</main>
 		</div>
 
-		<footer>
-			{ page.footer }
-		</footer>
-
+		<footer>{ page.footer }</footer>
 		{
 			page.script != undefined
 				? ( <script rel="stylesheet" href={ `/assets/js/${ page.script }.js` } /> )
@@ -44,26 +32,12 @@ const Page = ( page ) => (
 	</html>
 );
 
-
 Page.propTypes = {
-/**
-	 * title: Homepage
-	 */
 	title: PropTypes.string.isRequired,
-
-	/**
-	 * main: (partials)(5)
-	 */
 	main: PropTypes.node.isRequired,
-
-	/**
-	 * footer: (partials)(2)
-	 */
 	footer: PropTypes.node.isRequired,
 };
 
-
 Page.defaultProps = {};
-
 
 export default Page;
