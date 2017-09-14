@@ -1,0 +1,11 @@
+{
+  "name": "cuttlebelle-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:2metres/cuttlebelle-sandbox.git",
+  "author": "Andrew Carr <andrew@2metres.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cuttlebelle": "^1.0.0-alpha.30"
+  }
+}
