@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "build": "cuttlebelle",
-    "watch": "cuttlebelle -w",
+    "watch": "python -m SimpleHTTPServer 3000 && cuttlebelle -w",
     "test": "exit 1"
   },
   "devDependencies": {
